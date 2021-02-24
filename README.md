@@ -6,4 +6,6 @@ Dans le cas des compositions, on n'utilise pas de pointeur. C'est pourquoi on re
 L'instanciation des objets Diete se  fait dans les constructeurs des classes dans les fichiers cpp, d'une façon indirecte à partir des autres 
 attributs. Ex : la diete en herbe du Rhinoceros se calcule à partir de l'attribut superficie_enclos idem pour les autres...
 
+CECI EST UN CHANGEMENT AU READ ME AFIN DE FAIRE UN TEST SEULEMENT 24 FÉVRIER 2021 14:13
+
 
