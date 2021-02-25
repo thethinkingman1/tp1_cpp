@@ -12,6 +12,8 @@ public:
 	virtual ~Animal(){};
 	virtual float obtenirPoids();
 	virtual void attribuerPoids(float poids);
+    virtual std::string obtenirNom();
+    virtual void attribuerNom(std::string nom);
 	
 	
 };

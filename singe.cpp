@@ -2,7 +2,7 @@
 #include "animal.h"
 #include <iostream>
 
-Singe::Singe(std::string nom, float poids, bool le_booleen):Animal(nom, poids) {
+Singe::Singe(std::string nom, float poids, bool le_booleen): Animal(nom, poids) {
 	this->enclosAvecHerbe = le_booleen;
 	
 	//La diete en viande du singe dépend de son poids

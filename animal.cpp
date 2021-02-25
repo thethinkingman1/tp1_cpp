@@ -14,5 +14,14 @@ float Animal::Animal::obtenirPoids(){
 
 void Animal::attribuerPoids(float poids){
 	this->poids = poids;
-};
+}
+
+    std::string Animal::Animal::obtenirNom() {
+    return this->nom;
+}
+
+void Animal::attribuerNom(std::string nom) {
+    this->nom = nom;
+}
+;
 

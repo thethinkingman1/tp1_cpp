@@ -7,8 +7,10 @@
 class Tigre :public Animal {
 	
 	Diete diete_tigre;
+    
+public:
 	
 	Tigre(std::string nom, float poids);
 	
-	std::string afficherInfos();
+	void afficherInfos();
 };
