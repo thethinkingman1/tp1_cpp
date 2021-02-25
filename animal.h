@@ -14,6 +14,7 @@ public:
 	virtual void attribuerPoids(float poids);
     virtual std::string obtenirNom();
     virtual void attribuerNom(std::string nom);
+    virtual void afficherInfos();
 	
 	
 };

@@ -23,5 +23,9 @@ void Animal::attribuerPoids(float poids){
 void Animal::attribuerNom(std::string nom) {
     this->nom = nom;
 }
+
+void Animal::afficherInfos() {
+    
+}
 ;
 
