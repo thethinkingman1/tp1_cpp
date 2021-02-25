@@ -2,8 +2,12 @@
 #include <iostream>
 
 Rhinoceros::Rhinoceros(std::string nom, float poids, int superficie) :Animal(nom, poids){
+    if (superficie < 2000) {
+        this->superficie_enclos = 2000;
+    }
+    else {
 	this->superficie_enclos = superficie;
-	
+    }
 	//Le rhinoceros est fructivore et herbivore
 	this->diete_rhinoceros.definirDieteViande(0);
 	
