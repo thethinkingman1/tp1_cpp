@@ -29,6 +29,7 @@ void Singe::afficherInfos() {
     std::cout << "Singe : " << nom << "(" << poids << " kg)" << std::endl;
     afficherEnclos();
     std::cout << this->diete_singe.afficherDiete() << std::endl;
+    std::cout << "" << std::endl;
     
     
 }

@@ -14,6 +14,7 @@ Tigre::Tigre(std::string nom, float poids): Animal(nom,poids) {
 void Tigre::afficherInfos(){
     std::cout << "Tigre : " << nom << " (" << poids << "kg)" <<std::endl;
     std::cout << this->diete_tigre.afficherDiete() << std::endl;
+    std::cout << "" << std::endl;
     
 	
 }
