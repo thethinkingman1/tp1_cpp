@@ -1,5 +1,6 @@
 #include "singe.h"
 #include "animal.h"
+#include <iostream>
 
 Singe::Singe(std::string nom, float poids, bool le_booleen):Animal(nom, poids) {
 	this->enclosAvecHerbe = le_booleen;
@@ -14,10 +15,25 @@ Singe::Singe(std::string nom, float poids, bool le_booleen):Animal(nom, poids) {
 	//La diete en fruit du singe dépend du poids du singe
 	this->diete_singe.definirDieteFruit(poids*((float)1/100)) ;
 	}
-	
-void Singe::afficherInfos(){
-	
+
+void Singe::afficherEnclos() {
+    if (enclosAvecHerbe == true) {
+        std::cout << "Enclos avec herbe" << std::endl;
+    }
+        else {
+        std::cout << "Enclos sans herbes" <<std::endl;
+        }
 }
+    
+void Singe::afficherInfos() {
+    std::cout << "Singe : " << nom << "(" << poids << " kg)" << std::endl;
+    afficherEnclos();
+    std::cout << this->diete_singe.afficherDiete() << std::endl;
+    
+    
+}
+	
+
 
 
 

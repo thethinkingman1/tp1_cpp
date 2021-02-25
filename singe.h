@@ -10,6 +10,7 @@ private:
 public :
 	Diete diete_singe;
 	Singe(std::string nom, float poids, bool le_booleen);
-	std::string afficherInfos();
+	void afficherInfos();
+    void afficherEnclos();
 	
 };
