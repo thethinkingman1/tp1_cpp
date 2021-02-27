@@ -14,9 +14,8 @@ void afficherMenu();
 void creerTigre(); 
 void creerSinge(); 
 void creerRhino();
-void afficherQuantiteViande();
-void afficherQuantiteFruit();
-void afficherQuantiteHerbe();
+void afficherRapport();
+
 
 
 
@@ -45,24 +44,18 @@ int main()
             creerRhino(); 
             break; 
         case 4: 
-            afficherQuantiteViande(); 
+            afficherRapport(); 
             break; 
         case 5: 
-            afficherQuantiteFruit(); 
-            break; 
-        case 6: 
-            afficherQuantiteHerbe(); 
-            break; 
-        case 7: 
-            cout << " Vous avez quitter. Merci d'avoir utilise notre logiciel!" << endl; 
+            cout << "\nVous avez quitter. Merci d'avoir utilise notre logiciel!" << endl; 
             break; 
         default: 
-            cout << " Vous avez entrez une mauvaise valeur. Entree une valeur entre 1 er 7. Merci. " << endl; 
+            cout << "\nVous avez entrez une mauvaise valeur. Entree une valeur entre 1 er 7. Merci. " << endl; 
             
         
         }
     
-    } while (choix != 7);
+    } while (choix != 5);
 
 }
 
@@ -71,8 +64,8 @@ void afficherMenu(){
     
     
     cout << "\n\n******************************** Software de Gestion du Zoo ********************************" << endl; 
-    cout << "\n1 - Ajouter un tigre \t 2- Ajouter un singe \t 3- Ajouter un rhino\n4- Quantite de viande a fournir par jour "
-    << "\t 5- Quantite de fruit a fournir par jour\n6- Quantite d'herbe a fournir par jour\n7- Quitter" << endl;
+    cout << "\n1 - Ajouter un tigre \t 2- Ajouter un singe \t 3- Ajouter un rhino\n4- Rapport "
+    << "\t5- Quitter" << endl;
     
     }
 
@@ -98,23 +91,9 @@ void creerRhino(){
     
     }
     
-void afficherQuantiteViande(){
+void afficherRapport(){
     
     cout << " Quantite de viande pour tous les animaux: " << endl; 
-    
-    
-    }
-
-void afficherQuantiteFruit(){
-    
-    cout << " Quantite de Fruit pour tous les animaux: " << endl; 
-    
-    
-    }
-
-void afficherQuantiteHerbe(){
-    
-    cout << " Quantite d'herbe pour tous les animaux: " << endl; 
     
     
     }
