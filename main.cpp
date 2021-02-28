@@ -62,19 +62,10 @@ int main()
             cout << "Entrez le poids du Rhino" << endl; 
             cin >> poids; 
             cout << "Entrez la superficie de l'enclos" << endl; 
-            cin >> superficieEnclos; 
-            if (superficieEnclos > 1999) {
-                    
-                animaux[indexTableau] = new Rhinoceros(nom, poids, superficieEnclos);  
-                indexTableau ++;
-                
-                }
-                
-                else { 
-                    
-                    cout << "\n ** Attention! La superficie doit etre plus grande ou egale a 2000 m carree. L'information n'a pas ete enregistre. Recommencez." << endl; 
-                
-                }
+            cin >> superficieEnclos;  
+   
+            animaux[indexTableau] = new Rhinoceros(nom, poids, superficieEnclos);  
+            indexTableau ++;
             
             break; 
         
@@ -87,13 +78,14 @@ int main()
                     dieteViande = dieteViande + (*animaux[i]).getDieteViande();
                     dieteFruits = dieteFruits + (*animaux[i]).getDieteFruits();
                     dieteHerbe = dieteHerbe + (*animaux[i]).getDieteHerbe();
+                    //cout << "Viande: " << dieteViande << " | Fruits: " << dieteFruits << " | Herbe: " << dieteHerbe << endl; // For testing purposes
                 
                 }
                 
                 cout << "Diete quotidienne totale: " << endl; 
-                cout << "\tViande: " << dieteViande << "KG" << endl;
-                cout << "\tFruits: " << dieteFruits << "KG" << endl;
-                cout << "\tHerbe: " << dieteHerbe << "KG" << endl;
+                cout << " - Viande: " << dieteViande << " kg" << endl;
+                cout << " - Fruits: " << dieteFruits << " kg" << endl;
+                cout << " - Herbe: " << dieteHerbe << " kg" << endl;
                 
             
             break; 
@@ -124,7 +116,7 @@ int main()
 void afficherMenu(){
     
     
-    cout << "\n\n******************************** Software de Gestion du Zoo ********************************" << endl; 
+    cout << "\n\n******************************** Logiciel de Gestion du Zoo ********************************" << endl; 
     cout << "\n1 - Ajouter un tigre \t 2- Ajouter un singe \t 3- Ajouter un rhino\n4- Compte rendu du Parc "
     << "\t5- Quitter" << endl;
     
