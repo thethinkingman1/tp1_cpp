@@ -61,13 +61,25 @@ int main()
             cin >> nom; 
             cout << "Entrez le poids du Rhino" << endl; 
             cin >> poids; 
-            cout << "Superficie de l'enclos" << endl; 
+            cout << "Entrez la superficie de l'enclos" << endl; 
             cin >> superficieEnclos; 
-            animaux[indexTableau] = new Rhinoceros(nom, poids, superficieEnclos);  
-            indexTableau ++;      
+            if (superficieEnclos > 1999) {
+                    
+                animaux[indexTableau] = new Rhinoceros(nom, poids, superficieEnclos);  
+                indexTableau ++;
+                
+                }
+                
+                else { 
+                    
+                    cout << "\n ** Attention! La superficie doit etre plus grande ou egale a 2000 m carree. L'information n'a pas ete enregistre. Recommencez." << endl; 
+                
+                }
+            
             break; 
+        
         case 4: 
-        cout << "\n *** Compte Rendu du Zoo *** " << endl; 
+            cout << "\n *** Compte Rendu du Zoo *** " << endl; 
             for (int i = 0 ; i < indexTableau; i ++){
                 
                     (*animaux[i]).afficherInfos();
