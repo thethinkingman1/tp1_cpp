@@ -24,6 +24,24 @@ void Singe::afficherEnclos() {
         std::cout << "Enclos sans herbes" <<std::endl;
         }
 }
+
+float Singe::getDieteViande(){
+    
+    return this->diete_singe.recupererDieteViande();
+    
+    }
+
+float Singe::getDieteFruits(){
+    
+    return this->diete_singe.recupererDieteFruit();
+    
+    }
+    
+float Singe::getDieteHerbe(){
+    
+    return this->diete_singe.recupererDieteHerbe();
+    
+    }
     
 void Singe::afficherInfos() {
     std::cout << "Singe : " << nom << "(" << poids << " kg)" << std::endl;

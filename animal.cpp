@@ -27,5 +27,20 @@ void Animal::attribuerNom(std::string nom) {
 void Animal::afficherInfos() {
     
 }
+
+float Animal::getDieteViande(){
+    
+    
+    }
+    
+float Animal::getDieteFruits(){
+    
+    
+    }
+    
+float Animal::getDieteHerbe(){
+    
+    
+    }
 ;
 

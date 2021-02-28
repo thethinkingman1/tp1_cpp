@@ -15,6 +15,9 @@ public:
     virtual std::string obtenirNom();
     virtual void attribuerNom(std::string nom);
     virtual void afficherInfos();
+    virtual float getDieteViande();
+    virtual float getDieteFruits();
+    virtual float getDieteHerbe();
 	
 	
 };

@@ -9,7 +9,11 @@ private:
 	Diete diete_rhinoceros;
 
 public:
-	Rhinoceros(std::string nom, float poids, int superficie);
+	Rhinoceros(std::string nom, float poids, int superficie);    
+    
+    float getDieteViande();
+    float getDieteFruits();
+    float getDieteHerbe();
 	
 	void afficherInfos();
 	

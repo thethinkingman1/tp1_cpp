@@ -26,6 +26,24 @@ Rhinoceros::Rhinoceros(std::string nom, float poids, int superficie) :Animal(nom
 	this->diete_rhinoceros.definirDieteFruit(poids*((float)5/1000));
 }
 
+float Rhinoceros::getDieteViande(){
+    
+    return this->diete_rhinoceros.recupererDieteViande();
+    
+    }
+
+float Rhinoceros::getDieteFruits(){
+    
+    return this->diete_rhinoceros.recupererDieteFruit();
+    
+    }
+    
+float Rhinoceros::getDieteHerbe(){
+    
+    return this->diete_rhinoceros.recupererDieteHerbe();
+    
+    }
+
 void Rhinoceros::afficherInfos(){
     std::cout << "Rhinoceros : " << nom << " (" << poids << "kg)" <<std::endl;
     std::cout << "Enclos de " << superficie_enclos << " mètres-carrés" << std::endl;

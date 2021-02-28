@@ -11,6 +11,8 @@ class Tigre :public Animal {
 public:
 	
 	Tigre(std::string nom, float poids);
-	
+    float getDieteViande();
+    float getDieteFruits();
+    float getDieteHerbe();
 	void afficherInfos();
 };

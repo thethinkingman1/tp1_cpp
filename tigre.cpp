@@ -11,6 +11,24 @@ Tigre::Tigre(std::string nom, float poids): Animal(nom,poids) {
 	
 };
 
+float Tigre::getDieteViande(){
+    
+    return this->diete_tigre.recupererDieteViande();
+    
+    }
+
+float Tigre::getDieteFruits(){
+    
+    return this->diete_tigre.recupererDieteFruit();
+    
+    }
+    
+float Tigre::getDieteHerbe(){
+    
+    return this->diete_tigre.recupererDieteHerbe();
+    
+    }
+
 void Tigre::afficherInfos(){
     std::cout << "Tigre : " << nom << " (" << poids << "kg)" <<std::endl;
     std::cout << this->diete_tigre.afficherDiete() << std::endl;
