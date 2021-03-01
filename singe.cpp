@@ -2,7 +2,8 @@
 #include "animal.h"
 #include <iostream>
 
-Singe::Singe(std::string nom, float poids, bool le_booleen): Animal(nom, poids) {
+Singe::Singe(std::string nom, float poids, bool le_booleen) : Animal(nom, poids) {
+    
 	this->enclosAvecHerbe = le_booleen;
 	
 	//La diete en viande du singe dépend de son poids
@@ -13,43 +14,51 @@ Singe::Singe(std::string nom, float poids, bool le_booleen): Animal(nom, poids) 
 	else {this->diete_singe.definirDieteHerbe(0);}
 	
 	//La diete en fruit du singe dépend du poids du singe
-	this->diete_singe.definirDieteFruit(poids*((float)1/100)) ;
-	}
-
-void Singe::afficherEnclos() {
-    if (enclosAvecHerbe == true) {
-        std::cout << "Enclos avec herbe" << std::endl;
-    }
-        else {
-        std::cout << "Enclos sans herbes" <<std::endl;
-        }
+	this->diete_singe.definirDieteFruit(poids*((float)1/100));
+	
 }
 
-float Singe::getDieteViande(){
+void Singe::afficherEnclos() {
+    
+    if (enclosAvecHerbe == true) {
+        
+        std::cout << "Enclos avec herbe" << std::endl;
+        
+    }  
+    
+    else {
+        
+        std::cout << "Enclos sans herbes" <<std::endl;
+        
+    }
+    
+}
+
+float Singe::obtenirDieteViande(){
     
     return this->diete_singe.recupererDieteViande();
     
-    }
+}
 
-float Singe::getDieteFruits(){
+float Singe::obtenirDieteFruit(){
     
     return this->diete_singe.recupererDieteFruit();
     
-    }
+}
     
-float Singe::getDieteHerbe(){
+float Singe::obtenirDieteHerbe(){
     
     return this->diete_singe.recupererDieteHerbe();
     
-    }
+}
     
 void Singe::afficherInfos() {
+    
     std::cout << "Singe : " << nom << "(" << poids << " kg)" << std::endl;
     afficherEnclos();
     std::cout << this->diete_singe.afficherDiete() << std::endl;
     std::cout << "" << std::endl;
-    
-    
+        
 }
 	
 

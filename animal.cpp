@@ -1,46 +1,59 @@
-
 #include "animal.h"
 
 
-Animal::Animal(std::string nom, float poids){
+Animal::Animal(std::string nom, float poids) {
+    
 	this->nom = nom;
 	this->poids = poids;
+    
 };
 
 
-float Animal::Animal::obtenirPoids(){
+float Animal::Animal::obtenirPoids() {
+    
 	return this->poids;
+    
 };
 
-void Animal::attribuerPoids(float poids){
-	this->poids = poids;
+void Animal::attribuerPoids(float poids) {
+	
+    this->poids = poids;
+
 }
 
-    std::string Animal::Animal::obtenirNom() {
-    return this->nom;
+std::string Animal::Animal::obtenirNom() {
+   
+ return this->nom;
+
 }
 
 void Animal::attribuerNom(std::string nom) {
+    
     this->nom = nom;
+
 }
 
 void Animal::afficherInfos() {
     
+    //Implementer dans classes Filles
+    
 }
 
-float Animal::getDieteViande(){
+float Animal::obtenirDieteViande(){
+
+    //Implementer dans classes Filles
     
+}
     
-    }
+float Animal::obtenirDieteFruit() {
     
-float Animal::getDieteFruits(){
+    //Implementer dans classes Filles
     
+}
     
-    }
+float Animal::obtenirDieteHerbe(){
     
-float Animal::getDieteHerbe(){
+    //Implementer dans classes Filles
     
-    
-    }
-;
+}
 

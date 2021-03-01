@@ -5,15 +5,19 @@
 
 
 class Singe :public Animal {
-private:
-	bool enclosAvecHerbe;
-public :
-	Diete diete_singe;
-	Singe(std::string nom, float poids, bool le_booleen);
-    float getDieteViande();
-    float getDieteFruits();
-    float getDieteHerbe();
-	void afficherInfos();
-    void afficherEnclos();
+    
+    private:
+
+        bool enclosAvecHerbe;
+        
+    public:
+
+        Diete diete_singe;
+        Singe(std::string nom, float poids, bool le_booleen);
+        float obtenirDieteViande();
+        float obtenirDieteFruit();
+        float obtenirDieteHerbe();
+        void afficherInfos();
+        void afficherEnclos();
 	
 };

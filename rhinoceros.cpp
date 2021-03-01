@@ -2,13 +2,18 @@
 #include <iostream>
 #include <iomanip>
 
-Rhinoceros::Rhinoceros(std::string nom, float poids, int superficie) :Animal(nom, poids){
+Rhinoceros::Rhinoceros(std::string nom, float poids, int superficie) :Animal(nom, poids) {
+   
     if (superficie < 2000) {
+        
         this->superficie_enclos = 2000;
     }
+    
     else {
-	this->superficie_enclos = superficie;
+        
+        this->superficie_enclos = superficie;
     }
+    
 	//Le rhinoceros est fructivore et herbivore
 	this->diete_rhinoceros.definirDieteViande(0);
 	
@@ -17,34 +22,37 @@ Rhinoceros::Rhinoceros(std::string nom, float poids, int superficie) :Animal(nom
 	//La quantite d'herbe mangée est : quantite = capacité*superficie
 	float capacite = (float)1/100;
 	float herbeMangee = capacite*this->superficie_enclos;
-	// Les besoins en herbe d'un rhinoceros correspondent à 2% du poids par jour
+	
+    // Les besoins en herbe d'un rhinoceros correspondent à 2% du poids par jour
 	float besoin = ((float)2/100)*poids;
 	if (herbeMangee<besoin) {this->diete_rhinoceros.definirDieteHerbe(besoin-herbeMangee);}
 	else {this->diete_rhinoceros.definirDieteHerbe(0);};
 	
 	//La diete en fruit du rhinoceros dépend de son poids;
 	this->diete_rhinoceros.definirDieteFruit(poids*((float)5/1000));
+    
 }
 
-float Rhinoceros::getDieteViande(){
+float Rhinoceros::obtenirDieteViande(){
     
     return this->diete_rhinoceros.recupererDieteViande();
     
     }
 
-float Rhinoceros::getDieteFruits(){
+float Rhinoceros::obtenirDieteFruit(){
     
     return this->diete_rhinoceros.recupererDieteFruit();
     
     }
     
-float Rhinoceros::getDieteHerbe(){
+float Rhinoceros::obtenirDieteHerbe(){
     
     return this->diete_rhinoceros.recupererDieteHerbe();
     
     }
 
-void Rhinoceros::afficherInfos(){
+void Rhinoceros::afficherInfos() {
+    
     std::cout << "Rhinoceros : " << nom << " (" << poids << "kg)" <<std::endl;
     std::cout << "Enclos de " << superficie_enclos << " mètres-carrés" << std::endl;
     std::cout <<this->diete_rhinoceros.afficherDiete();

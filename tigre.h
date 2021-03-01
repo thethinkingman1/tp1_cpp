@@ -5,14 +5,17 @@
 	
 
 class Tigre :public Animal {
-	
-	Diete diete_tigre;
+
+    protected:
+        
+        Diete diete_tigre;
+        
+    public:
+        
+        Tigre(std::string nom, float poids);
+        float obtenirDieteViande();
+        float obtenirDieteFruit();
+        float obtenirDieteHerbe();
+        void afficherInfos();
     
-public:
-	
-	Tigre(std::string nom, float poids);
-    float getDieteViande();
-    float getDieteFruits();
-    float getDieteHerbe();
-	void afficherInfos();
 };
